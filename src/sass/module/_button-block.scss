@@ -1,0 +1,9 @@
+@use 'global' as *;
+
+.button-block {
+    width: rem(206);
+    height: rem(58);
+    position: relative;
+    margin: auto;
+    // z-index: 1;
+}
