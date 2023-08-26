@@ -1,0 +1,77 @@
+@use 'global' as *;
+
+.header {
+    background: rgba(13, 41, 54, 0.68);
+    width: 100%;
+    height: rem(80);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    @include mq(md) {
+        height: rem(90);
+    }
+}
+
+.header__inner {
+    height: inherit;
+    padding: 0 rem(15);
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    @include mq(md) {
+        padding: 0 rem(40);
+    }
+}
+
+.header__logo {
+    width: rem(102);
+    // height: inherit;
+    position: relative; // fixedだと高さがなくなって落ちるのにrelativeはなぜ落ちない？
+    z-index: 10;
+    @include mq(md) {
+        width: rem(133);
+
+    }
+}
+
+.header__logo img {
+
+}
+
+.header__drawer {
+    margin-left: auto;
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.header__sp-nav-wrap {
+    display: none;
+    position: absolute; // fixedでも可
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $green;
+    z-index: 3;
+    // transform: translateX(-100%);
+    // transition: all .3s;
+    // overflow: scroll;
+}
+
+// .header__sp-nav-wrap.is-active {
+//     transform: translateX(0);
+// }
+
+.header__sp-nav {
+    margin-top: rem(64);
+    margin-left: rem(15);
+    overflow: scroll;
+}
+
+.header__pc-nav {
+    margin-left: auto;
+}

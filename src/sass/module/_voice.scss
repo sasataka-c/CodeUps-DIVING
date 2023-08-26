@@ -1,0 +1,11 @@
+@use 'global' as *;
+
+.voice__inner {
+    padding-left: rem(20);
+    padding-right: rem(10); // 初稿提出時に確認する！！
+}
+
+.voice__items {
+    margin-top: rem(40);
+}
+

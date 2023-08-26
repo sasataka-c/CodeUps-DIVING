@@ -4,18 +4,19 @@
     text-align: center;
 }
 
-.section-header__title {
+.section-header__en-title {
     font-size: rem(32);
     font-family: $english-font-family;
     // letter-spacing: 0.04em;
     font-weight: $normal;
     line-height: calc(40 / 32);
+    color: $black;
     @include mq(md) {
         font-size: rem(40);
     }
 }
 
-.section-header__subtitle {
+.section-header__ja-title {
     font-size: rem(12);
     color: $green;
     font-weight: $normal;
@@ -26,6 +27,10 @@
     }
 }
 
-.section-header__title-green {
+.section-header__en-title--green {
     color: $green;
+}
+
+.section-header__contact--big {
+    font-size: rem(80);
 }

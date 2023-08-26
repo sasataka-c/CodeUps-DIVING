@@ -1,0 +1,129 @@
+@use 'global' as *;
+
+.mv {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.mv__inner {
+    height: inherit;
+}
+
+.mv__swiper {
+    height: inherit;
+
+    .swiper-wrapper {
+        height: inherit;
+    }
+
+    .swiper-slide {
+        height: inherit;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 375 / 667;
+
+        @include mq("md") {
+            aspect-ratio: 1440 / 768;
+        }
+    }
+}
+
+// .mv {
+//     width: 100%;
+//     height: 100vh;
+// }
+
+// .mv-swiper {
+//     height: inherit;
+// }
+
+// .swiper-slide {
+//     width: 100%;
+//     height: inherit;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     position: relative;
+// }
+
+// .mv01 {
+//     background-image: url(../images/common/mv01-sp.jpg);
+// }
+// .mv02 {
+//     background-image: url(../images/common/mv02-sp.jpg);
+// }
+// .mv03 {
+//     background-image: url(../images/common/mv03-sp.jpg);
+// }
+// .mv04 {
+//     background-image: url(../images/common/mv04-sp.jpg);
+// }
+
+// .mv__swiper {
+//     width: 100%;
+//     height: inherit;
+//     position: relative;
+// }
+
+// .swiper-wrapper {
+//     height: inherit;
+// }
+
+// .mv__img {
+//     width: 100%;
+//     height: 100%;
+//     position: relative;
+//     // padding-top: calc((667 / 375) * 100%);
+//     aspect-ratio: 375 / 667;
+// }
+
+// .mv__img img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     // object-position: center center;
+// }
+// .mv__img picture {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     object-fit: cover;
+// }
+
+.mv__head {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.mv__head-title,
+.mv__head-subtitle {
+    color: $white;
+    text-align: center;
+}
+
+.mv__head-title {
+    font-family: 'Lato, sans-serif';
+    font-size: rem(40);
+    font-weight: $normal;
+    letter-spacing: 0.54em;
+    text-indent: 0.54em;
+    // margin-right: -0.54em;
+    @include mq(md) {
+        font-size: rem(80);
+    }
+}
+
+.mv__head-subtitle {
+    font-family: $english-font-family;
+    font-size: rem(20);
+    font-weight: $normal;
+}

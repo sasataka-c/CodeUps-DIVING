@@ -20,6 +20,17 @@ body {
   font-family: $base-font-family;
 }
 
+body.is-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+// body.no-scroll {
+//   overflow: hidden;
+// }
+
 // フォントウェイト
 $regular: 300;
 $normal: 400;

@@ -1,0 +1,20 @@
+@use 'global' as *;
+
+.campaign__items {
+    margin-top: rem(24);
+    // display: flex;
+    // flex-direction: column;
+}
+
+.campaign__inner {
+    padding: 0 rem(15);
+    overflow: hidden;
+}
+
+.swiper {
+    overflow: visible;
+}
+
+.campaign__button {
+    margin: rem(40) auto;
+}

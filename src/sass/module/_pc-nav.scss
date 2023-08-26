@@ -1,0 +1,88 @@
+@use 'global' as *;
+
+.pc-nav {
+    height: inherit;
+    display: none;
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.pc-nav__items {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: inherit;
+}
+
+.pc-nav__item {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    // padding-left: rem(40);
+}
+
+.pc-nav__item:first-child {
+    padding-left: 0;
+}
+
+.pc-nav__item a {
+    // display: inline-block;
+    position: relative;
+    // height: inherit; // これだと上下中央寄せのやり方がわからない
+    // 上下のpaddingつければクリック領域は広く出来そうだけど・・・
+    // ライブコーディングで、高さが決まっているのに中のコンテンツの幅で調整しようとすると
+    // 表示崩れを起こすと仰ってたので却下
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    padding: 0 rem(20);
+}
+
+.pc-nav__item:first-child a {
+    padding-left: 0;
+}
+.pc-nav__item:last-child a {
+    padding-right: 0;
+}
+
+.pc-nav__item a::after {
+    content: '';
+    position: absolute;
+    bottom: rem(-4);
+    left: 10%;
+    width: 80%;
+    height: rem(1);
+    background-color: $white;
+    transform: scale(0, 1);
+    transition: all .3s;
+    transform-origin: center top;
+}
+
+.pc-nav__item:first-child a::after {
+    left: 0;
+}
+.pc-nav__item:last-child a::after {
+    left: 20%;
+}
+// ↑ 左右のpaddingでクリック領域広げたけど、
+// 両端のpadding削除する時に下線の長さに影響が出たので追加
+
+.pc-nav__item a:hover::after {
+    transform: scale(1, 1);
+}
+
+.pc-nav__item-title,
+.pc-nav__item-subtitle {
+    font-weight: $normal;
+    color: $white;
+}
+
+.pc-nav__item-title {
+    font-size: rem(18);
+    font-family: $english-font-family;
+}
+
+.pc-nav__item-subtitle {
+    font-size: rem(10);
+}

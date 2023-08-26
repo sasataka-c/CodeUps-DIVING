@@ -1,0 +1,74 @@
+@use 'global' as *;
+
+.cotact {
+
+}
+
+.contact__inner {
+    padding: 0 rem(30);
+}
+
+.contact__body {
+    padding: 0 rem(5);
+}
+
+.contact__logo {
+    border-bottom: 1px solid $green;
+    padding-bottom: rem(6);
+    
+}
+
+.contact__logo img {
+    margin: auto;
+    width: rem(174);
+    @include mq(md) {
+        width: rem(200);
+    }
+}
+
+.contact__info-wrap {
+    margin-top: rem(16);
+}
+
+.contact__info {
+    text-align: center;
+}
+
+.contact__address,
+.contact__tel,
+.contact__hours,
+.contact__holiday {
+    font-size: rem(16);
+    font-weight: $normal;
+    line-height: 1.5;
+    color: $black;
+}
+
+.contact__tel,
+.contact__hours,
+.contact__holiday {
+    margin-top: rem(4);
+}
+
+.contact__map iframe {
+    margin-top: rem(16);
+    aspect-ratio: 295 / 160;
+    width: 100%;
+    height: 100%;
+}
+
+.contact__link {
+    margin-top: rem(40);
+}
+
+.contact__link-text {
+    margin-top: rem(8);
+    text-align: center;
+    font-size: rem(14);
+    font-weight: $normal;
+    color: $green;
+}
+
+.contact__button {
+    margin: rem(40) auto 0;
+}

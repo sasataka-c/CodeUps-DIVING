@@ -1,0 +1,39 @@
+@use 'global' as *;
+
+.link-nav {
+    color: $white;
+}
+.link-nav__head {
+    margin-top: rem(40);
+    position: relative;
+}
+
+.link-nav__head::before {
+    content: url(../images/common/_ヒトデ.png);
+    position: absolute;
+    top: 50%;
+    left: rem(-22);
+    transform: translateY(-50%);
+}
+
+.link-nav__head a {
+    display: block;
+    font-weight: $bold;
+    font-size: rem(16);
+    line-height: calc(18 / 16);
+}
+
+.link-nav__items {
+    margin-left: rem(22);
+}
+
+.link-nav__item {
+    margin-top: rem(24);
+}
+
+.link-nav__item a {
+    display: block;
+    font-weight: $normal;
+    font-size: rem(16);
+    line-height: calc(18 / 16);
+}

@@ -1,0 +1,11 @@
+@use 'global' as *;
+
+.footer__copyright {
+    font-size: rem(12);
+    font-family: $english-font-family;
+    font-weight: $normal;
+    line-height: calc(18 / 12);
+    color: $white;
+    text-align: center;
+    margin-top: rem(40);
+}

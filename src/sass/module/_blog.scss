@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+.blog__inner {
+    padding: 0 rem(20);
+}
+
+.blog__items {
+    margin-top: rem(24);
+}
+
+.blog__button {
+    margin: rem(40) auto 0;
+}
