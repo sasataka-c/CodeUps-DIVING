@@ -32,7 +32,8 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./assets/js/jquery.inview.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -233,90 +234,326 @@
 
     <!-- Campaign -->
     <section class="campaign layout-campaign">
-      <div class="campaign__inner inner">
-        <div class="campaign__head section-header">
-          <h2 class="section-header__en-title">
-            <span class="section-header__en-title--green">C</span>ampaign
-          </h2>
-          <p class="section-header__ja-title">キャンペーン</p>
-        </div>
-        <div class="campaign__items">
-          <!-- Swiper -->
-          <div class="swiper js-campaign-Swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="" class="campaign__items-card campaign-card">
-                  <div class="campaign-card__img">
-                    <img src="./assets/images/common/campaign1.jpg" alt="様々な種類の魚が泳いでいる写真">
-                  </div>
-                  <div class="campaign-card__body">
-                    <p class="campaign-card__tag tag">ライセンス講習</p>
-                    <h3 class="campaign-card__title">ライセンス取得</h3>
-                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                    <div class="campaign-card__price-block">
-                      <span class="campaign-card__old-price">¥56,000</span>
-                      <span class="campaign-card__new-price">¥46,000</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="campaign__items-card campaign-card">
-                  <div class="campaign-card__img">
-                    <img src="./assets/images/common/campaign2.jpg" alt="様々な種類の魚が泳いでいる写真">
-                  </div>
-                  <div class="campaign-card__body">
-                    <p class="campaign-card__tag tag">体験ダイビング</p>
-                    <h3 class="campaign-card__title">貸切体験ダイビング</h3>
-                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                    <div class="campaign-card__price-block">
-                      <span class="campaign-card__old-price">¥24,000</span>
-                      <span class="campaign-card__new-price">¥18,000</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="campaign__items-card campaign-card">
-                  <div class="campaign-card__img">
-                    <img src="./assets/images/common/campaign3.jpg" alt="様々な種類の魚が泳いでいる写真">
-                  </div>
-                  <div class="campaign-card__body">
-                    <p class="campaign-card__tag tag">体験ダイビング</p>
-                    <h3 class="campaign-card__title">ナイトダイビング</h3>
-                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                    <div class="campaign-card__price-block">
-                      <span class="campaign-card__old-price">¥10,000</span>
-                      <span class="campaign-card__new-price">¥8,000</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="campaign__items-card campaign-card">
-                  <div class="campaign-card__img">
-                    <img src="./assets/images/common/campaign4.jpg" alt="様々な種類の魚が泳いでいる写真">
-                  </div>
-                  <div class="campaign-card__body">
-                    <p class="campaign-card__tag tag">ファンダイビング</p>
-                    <h3 class="campaign-card__title">貸切ファンダイビング</h3>
-                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                    <div class="campaign-card__price-block">
-                      <span class="campaign-card__old-price">¥20,000</span>
-                      <span class="campaign-card__new-price">¥16,000</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
+      <div class="campaign__container">
+        <div class="campaign__inner inner">
+          <div class="about__head section-header">
+            <h2 class="section-header__en-title"><span class="section-header__en-title--green">C</span>ampaign</h2>
+            <p class="section-header__ja-title">キャンペーン</p>
           </div>
-        </div>
-        <div class="campaign__button button-block">
-          <a href="" class="button-block__item">
-            View more
-          </a>
-          <div class="button-block__border"></div>
+          <div class="campaign__wrapper">
+            <div class="campaign__swiper swiper js-campaign-swiper">
+              <ul class="swiper-wrapper campaign__items">
+                <li class="swiper-slide campaign__item">
+                  <div class="campaign__card">
+                    <a href="#" class="campaign-card">
+                      <div class="campaign-card__img">
+                        <picture>
+                          <source
+                            srcset="./assets//images/common/campaign1-pc.jpg"
+                            media="(min-width:768px)"
+                          />
+                          <img
+                            src="./assets//images/common/campaign1.jpg"
+                            alt="色とりどりの魚が泳いでいる写真"
+                          />
+                        </picture>
+                      </div>
+                      <div class="campaign-card__body">
+                        <div class="campaign-card__head">
+                          <span class="campaign-card__tag tag">
+                            ライセンス講習</span
+                          >
+                          <h3 class="campaign-card__title">ライセンス取得</h3>
+                        </div>
+                        <div class="campaign-card__wrap">
+                          <p class="campaign-card__text">
+                            全部コミコミ(お一人様)
+                          </p>
+                          <div class="campaign-card__price">
+                            <p class="campaign-card__old-price">¥56,000</p>
+                            <p class="campaign-card__new-price">¥46,000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="swiper-slide campaign__item">
+                  <div class="campaign__card">
+                    <a href="#" class="campaign-card">
+                      <div class="campaign-card__img">
+                        <picture>
+                          <source
+                            srcset="./assets//images/common/campaign2-pc.jpg"
+                            media="(min-width:768px)"
+                          />
+                          <img
+                            src="./assets//images/common/campaign2.jpg"
+                            alt="海と島の写真"
+                          />
+                        </picture>
+                      </div>
+                      <div class="campaign-card__body">
+                        <div class="campaign-card__head">
+                          <span class="campaign-card__tag tag">
+                            体験ダイビング</span
+                          >
+                          <h3 class="campaign-card__title">
+                            貸切体験ダイビング
+                          </h3>
+                        </div>
+                        <div class="campaign-card__wrap">
+                          <p class="campaign-card__text">
+                            全部コミコミ(お一人様)
+                          </p>
+                          <div class="campaign-card__price">
+                            <p class="campaign-card__old-price">¥24,000</p>
+                            <p class="campaign-card__new-price">¥18,000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="swiper-slide campaign__item">
+                  <div class="campaign__card">
+                    <a href="#" class="campaign-card">
+                      <div class="campaign-card__img">
+                        <picture>
+                          <source
+                            srcset="./assets//images/common/campaign3-pc.jpg"
+                            media="(min-width:768px)"
+                          />
+                          <img
+                            src="./assets//images/common/campaign3.jpg"
+                            alt="くらげの写真"
+                          />
+                        </picture>
+                      </div>
+                      <div class="campaign-card__body">
+                        <div class="campaign-card__head">
+                          <span class="campaign-card__tag tag">
+                            体験ダイビング</span
+                          >
+                          <h3 class="campaign-card__title">
+                            ナイトダイビング
+                          </h3>
+                        </div>
+                        <div class="campaign-card__wrap">
+                          <p class="campaign-card__text">
+                            全部コミコミ(お一人様)
+                          </p>
+                          <div class="campaign-card__price">
+                            <p class="campaign-card__old-price">¥10,000</p>
+                            <p class="campaign-card__new-price">¥8,000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="swiper-slide campaign__item">
+                  <div class="campaign__card">
+                    <a href="#" class="campaign-card">
+                      <div class="campaign-card__img">
+                        <picture>
+                          <source
+                            srcset="./assets//images/common/campaign4-pc.jpg"
+                            media="(min-width:768px)"
+                          />
+                          <img
+                            src="./assets//images/common/campaign4.jpg"
+                            alt="ダイビング前の説明を受けてる写真"
+                          />
+                        </picture>
+                      </div>
+                      <div class="campaign-card__body">
+                        <div class="campaign-card__head">
+                          <span class="campaign-card__tag tag">
+                            ファンダイビング</span
+                          >
+                          <h3 class="campaign-card__title">
+                            貸切ファンダイビング
+                          </h3>
+                        </div>
+                        <div class="campaign-card__wrap">
+                          <p class="campaign-card__text">
+                            全部コミコミ(お一人様)
+                          </p>
+                          <div class="campaign-card__price">
+                            <p class="campaign-card__old-price">¥20,000</p>
+                            <p class="campaign-card__new-price">¥16,000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <!-- ループ用 -->
+                <li class="swiper-slide campaign__item">
+                  <div class="campaign__card">
+                    <a href="#" class="campaign-card">
+                      <div class="campaign-card__img">
+                        <picture>
+                          <source
+                            srcset="./assets//images/common/campaign1-pc.jpg"
+                            media="(min-width:768px)"
+                          />
+                          <img
+                            src="./assets//images/common/campaign1.jpg"
+                            alt="色とりどりの魚が泳いでいる写真"
+                          />
+                        </picture>
+                      </div>
+                      <div class="campaign-card__body">
+                        <div class="campaign-card__head">
+                          <span class="campaign-card__tag tag">
+                            ライセンス講習</span
+                          >
+                          <h3 class="campaign-card__title">ライセンス取得</h3>
+                        </div>
+                        <div class="campaign-card__wrap">
+                          <p class="campaign-card__text">
+                            全部コミコミ(お一人様)
+                          </p>
+                          <div class="campaign-card__price">
+                            <p class="campaign-card__old-price">¥56,000</p>
+                            <p class="campaign-card__new-price">¥46,000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="swiper-slide campaign__item">
+                  <div class="campaign__card">
+                    <a href="#" class="campaign-card">
+                      <div class="campaign-card__img">
+                        <picture>
+                          <source
+                            srcset="./assets//images/common/campaign2-pc.jpg"
+                            media="(min-width:768px)"
+                          />
+                          <img
+                            src="./assets//images/common/campaign2.jpg"
+                            alt="海と島の写真"
+                          />
+                        </picture>
+                      </div>
+                      <div class="campaign-card__body">
+                        <div class="campaign-card__head">
+                          <span class="campaign-card__tag tag">
+                            体験ダイビング</span
+                          >
+                          <h3 class="campaign-card__title">
+                            貸切体験ダイビング
+                          </h3>
+                        </div>
+                        <div class="campaign-card__wrap">
+                          <p class="campaign-card__text">
+                            全部コミコミ(お一人様)
+                          </p>
+                          <div class="campaign-card__price">
+                            <p class="campaign-card__old-price">¥24,000</p>
+                            <p class="campaign-card__new-price">¥18,000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="swiper-slide campaign__item">
+                  <div class="campaign__card">
+                    <a href="#" class="campaign-card">
+                      <div class="campaign-card__img">
+                        <picture>
+                          <source
+                            srcset="./assets//images/common/campaign3-pc.jpg"
+                            media="(min-width:768px)"
+                          />
+                          <img
+                            src="./assets//images/common/campaign3.jpg"
+                            alt="くらげの写真"
+                          />
+                        </picture>
+                      </div>
+                      <div class="campaign-card__body">
+                        <div class="campaign-card__head">
+                          <span class="campaign-card__tag tag">
+                            体験ダイビング</span
+                          >
+                          <h3 class="campaign-card__title">
+                            ナイトダイビング
+                          </h3>
+                        </div>
+                        <div class="campaign-card__wrap">
+                          <p class="campaign-card__text">
+                            全部コミコミ(お一人様)
+                          </p>
+                          <div class="campaign-card__price">
+                            <p class="campaign-card__old-price">¥10,000</p>
+                            <p class="campaign-card__new-price">¥8,000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="swiper-slide campaign__item">
+                  <div class="campaign__card">
+                    <a href="#" class="campaign-card">
+                      <div class="campaign-card__img">
+                        <picture>
+                          <source
+                            srcset="./assets//images/common/campaign4-pc.jpg"
+                            media="(min-width:768px)"
+                          />
+                          <img
+                            src="./assets//images/common/campaign4.jpg"
+                            alt="ダイビング前の説明を受けてる写真"
+                          />
+                        </picture>
+                      </div>
+                      <div class="campaign-card__body">
+                        <div class="campaign-card__head">
+                          <span class="campaign-card__tag tag">
+                            ファンダイビング</span
+                          >
+                          <h3 class="campaign-card__title">
+                            貸切ファンダイビング
+                          </h3>
+                        </div>
+                        <div class="campaign-card__wrap">
+                          <p class="campaign-card__text">
+                            全部コミコミ(お一人様)
+                          </p>
+                          <div class="campaign-card__price">
+                            <p class="campaign-card__old-price">¥20,000</p>
+                            <p class="campaign-card__new-price">¥16,000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 前後の矢印 -->
+            <div class="campaign__swiper-buttons">
+              <div
+                class="swiper-button-prev js-swiper-button-prev u-desktop"
+              ></div>
+              <div
+                class="swiper-button-next js-swiper-button-next u-desktop"
+              ></div>
+            </div>
+          </div>
+          <div class="campaign__button button-block">
+            <a href="" class="button-block__item">
+              View more
+            </a>
+            <div class="button-block__border"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -373,7 +610,7 @@
           <p class="section-header__ja-title">ダイビング情報</p>
         </div>
         <div class="information__content">
-          <div class="information__img">
+          <div class="information__img colorbox js-colorbox">
             <img src="./assets/images/common/info.jpg" alt="サンゴ礁と魚の写真">
           </div>
           <div class="information__body">
@@ -476,7 +713,7 @@
                   ここにタイトルが入ります。ここにタイトル
                 </h3>
               </div>
-              <div class="voice-card__img">
+              <div class="voice-card__img colorbox js-colorbox">
                 <img src="./assets/images/common/voice1.jpg" alt="麦わら帽子の女性の写真">
               </div>
             </div>
@@ -499,7 +736,7 @@
                   ここにタイトルが入ります。ここにタイトル
                 </h3>
               </div>
-              <div class="voice-card__img">
+              <div class="voice-card__img colorbox js-colorbox">
                 <img src="./assets/images/common/voice2.jpg" alt="麦わら帽子の女性の写真">
               </div>
             </div>
@@ -529,7 +766,7 @@
           <p class="section-header__ja-title">料金一覧</p>
         </div>
         <div class="price__container">
-          <div class="price__img">
+          <div class="price__img colorbox js-colorbox">
             <picture>
               <source srcset="./assets/images/common/price-pc.jpg" media="(min-width:768px)" />
               <img src="./assets/images/common/price-sp.jpg" alt="横から撮ったウミガメの写真" />
@@ -653,6 +890,11 @@
       </div>
     </section>
   </main>
+
+  <!-- トップへ戻るボタン -->
+  <button class="totop js-totop">
+    <img src="./assets/images/common/totop-icon.svg" alt="トップへ戻るボタン" />
+  </button>
 
   <!-- footer -->
   <footer class="footer layout-footer">
