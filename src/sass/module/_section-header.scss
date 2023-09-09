@@ -31,6 +31,17 @@
     color: $green;
 }
 
+.section-header__blog--white {
+    @include mq(md) {
+        color: $white;
+    }
+}
+
 .section-header__contact--big {
     font-size: rem(80);
+    font-family: $english-font-family;
+    // letter-spacing: 0.04em;
+    font-weight: $normal;
+    line-height: calc(40 / 32);
+    color: $black;
 }

@@ -1,11 +1,53 @@
 @use 'global' as *;
 
+.voice {
+    position: relative;
+}
+
+.voice::before {
+    @include mq(md) {
+        content: "";
+        display: inline-block;
+        background-image: url(../images/common/voice-kingyo.png);
+        background-size: cover;
+        width: rem(301);
+        height: rem(138);
+        position: absolute;
+        top: rem(-120);
+        left: rem(100);
+    }
+}
+
+.voice::after {
+    @include mq(md) {
+        content: "";
+        display: inline-block;
+        background-image: url(../images/common/voice-ibaratatsu.svg);
+        background-size: cover;
+        width: rem(71);
+        height: rem(161);
+        position: absolute;
+        right: rem(180);
+        bottom: rem(-67);
+    }
+}
+
 .voice__inner {
-    padding-left: rem(20);
-    padding-right: rem(10); // 初稿提出時に確認する！！
+
 }
 
 .voice__items {
     margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(30);
+        display: flex;
+        gap: rem(40);
+    }
 }
 
+.voice__button {
+    margin: rem(40) auto 0;
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}

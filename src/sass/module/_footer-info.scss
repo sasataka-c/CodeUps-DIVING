@@ -1,12 +1,26 @@
 @use 'global' as *;
 
+.footer-info {
+    @include mq(md) {
+        display: flex;
+    }
+}
+
 .footer-info__logo img {
     width: rem(120);
+    @include mq(md) {
+        width: rem(200);
+    }
 }
 
 .footer-info__icons {
     display: flex;
     margin-top: rem(16);
+    @include mq(md) {
+        margin-top: auto;
+        margin-bottom: rem(5);
+        margin-left: rem(40);
+    }
 }
 
 .footer-info__icon {
@@ -16,8 +30,12 @@
 }
 
 .footer-info__icon img {
-    width: rem(32);
-    height: rem(32);
+    width: rem(24);
+    height: rem(24);
+    @include mq(md) {
+        width: rem(32);
+        height: rem(32);
+    }
 }
 
 // .footer__link {

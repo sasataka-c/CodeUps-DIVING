@@ -1,13 +1,60 @@
 @use 'global' as *;
 
+.blog {
+    position: relative;
+    // z-index: 2;
+}
+
+.blog::before {
+    @include mq(md) {
+        content: "";
+        display: inline-block;
+        background-image: url(../images/common/blog-bg.jpg);
+        background-size: cover;
+        width: 100%;
+        height: rem(500);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.blog::after {
+    @include mq(md) {
+        content: "";
+        display: inline-block;
+        background-image: url(../images/common/blog-kingyo.png);
+        background-size: cover;
+        width: rem(437);
+        height: rem(201);
+        position: absolute;
+        top: rem(24);
+        left: rem(100);
+        z-index: -1;
+    }
+}
+
 .blog__inner {
-    padding: 0 rem(20);
+    @include mq(md) {
+        padding-top: rem(100);
+    }
 }
 
 .blog__items {
     margin-top: rem(24);
+
+    @include mq(md) {
+        display: flex;
+        gap: rem(40);
+        margin-top: rem(80);
+    }
 }
 
 .blog__button {
     margin: rem(40) auto 0;
+
+    @include mq(md) {
+        margin-top: rem(80);
+    }
 }

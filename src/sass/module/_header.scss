@@ -27,17 +27,18 @@
 
 .header__logo {
     width: rem(102);
-    // height: inherit;
+    height: inherit;
     position: relative; // fixedだと高さがなくなって落ちるのにrelativeはなぜ落ちない？
     z-index: 10;
     @include mq(md) {
         width: rem(133);
-
     }
 }
 
-.header__logo img {
-
+.header__logo a {
+    height: inherit;
+    display: flex;
+    align-items: center;
 }
 
 .header__drawer {

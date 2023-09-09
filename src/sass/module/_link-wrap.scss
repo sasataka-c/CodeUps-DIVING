@@ -2,15 +2,34 @@
 
 .link-wrap {
     display: flex;
-    flex-wrap: wrap;
     // justify-content: space-around;
 }
 
-.link-wrap__nav {
-    &:nth-child(2) {
-        margin-left: rem(16);
-    }
-    &:nth-child(4) {
-        margin-left: rem(34);
+.link-wrap__left,
+.link-wrap__right {
+    display: flex;
+    flex-direction: column;
+    @include mq(md) {
+        flex-direction: row;
     }
 }
+
+.link-wrap__right {
+    margin-left: rem(16);
+    @include mq(md) {
+        margin-left: 0;
+    }
+}
+
+.link-wrap__nav {
+    @include mq(md) {
+        margin-left: rem(120);
+    }
+}
+
+.link-wrap__left .link-wrap__nav:first-child {
+    @include mq(md) {
+            margin-left: 0;
+        }
+}
+
