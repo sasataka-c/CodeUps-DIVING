@@ -1,6 +1,7 @@
 @use 'global' as *;
 
 .tag {
+    width: fit-content;
     font-size: rem(12);
     font-weight: $normal;
     color: $green;

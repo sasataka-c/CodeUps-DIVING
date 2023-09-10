@@ -2,13 +2,13 @@
 
 .link-wrap {
     display: flex;
-    // justify-content: space-around;
 }
 
 .link-wrap__left,
 .link-wrap__right {
     display: flex;
     flex-direction: column;
+    justify-items: start;
     @include mq(md) {
         flex-direction: row;
     }

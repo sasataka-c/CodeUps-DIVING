@@ -28,7 +28,7 @@
 .header__logo {
     width: rem(102);
     height: inherit;
-    position: relative; // fixedだと高さがなくなって落ちるのにrelativeはなぜ落ちない？
+    position: relative;
     z-index: 10;
     @include mq(md) {
         width: rem(133);

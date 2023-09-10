@@ -21,35 +21,38 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         // loop: true,
         effect: 'fade',
         speed: 1500,
-        // autoplay: {
-        //     delay: 3000,
-        // }
+        autoplay: {
+            delay: 3000,
+        }
     });
 
     // キャンペーン画像スライダー
     const campaignSwiper = new Swiper(".js-campaign-swiper", {
         loop: true,
-        spaceBetween: 24,
-        speed: 2000,
-        width: 280,
-        loopedSlides: 8,
-        // autoplay: {
-        //   delay: 2000,
-        //   disableOnInteraction: false,
-        // },
-        breakpoints: {
-            768: {
-                spaceBetween: 40,
-                width: 333,
-            },
-        },
-
-        // 前後の矢印
+        speed: 1000,
         navigation: {
-            nextEl: ".js-swiper-button-next",
-            prevEl: ".js-swiper-button-prev",
+          nextEl: ".slider-button-next",
+          prevEl: ".slider-button-prev",
         },
-    });
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          375: {
+            slidesPerView: 1.25,
+            spaceBetween: 19,
+          },
+          768: {
+            slidesPerView: 2.7,
+            spaceBetween: 35,
+          },
+          1440: {
+            slidesPerView: 3.46,
+            spaceBetween: 40,
+          }
+        },
+      });
 
     // 画像のinveiw
     let box = $(".js-colorbox"),
@@ -79,7 +82,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
     });
 
-    //トップに戻るボタン
+  //トップへ戻るボタン
   var topBtn = $(".js-totop");
   topBtn.hide();
 
@@ -89,7 +92,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     var windowHeight = $(this).height();
     var bodyHeight = $(document).height();
 
-    // フッターの高さを動的に取得
+    // フッターの高さを取得
     var footerHeight = $(".footer").outerHeight() + 16;
 
     if (scrollPosition > 70) {

@@ -2,15 +2,17 @@
 
 .footer {
     background-color: $green;
+    padding-bottom: rem(56);
+    @include mq(md) {
+        padding-bottom: rem(80);
+    }
 }
 
 .footer__inner {
     padding-top: rem(48);
-    padding-bottom: rem(56);
     margin: auto;
     @include mq(md) {
         padding-top: rem(80);
-        padding-bottom: rem(80);
     }
 }
 
@@ -25,5 +27,12 @@
     @include mq(md) {
         font-size: rem(14);
         margin-top: rem(80);
+    }
+}
+
+.footer__copyright small {
+    font-size: rem(12);
+    @include mq(md) {
+        font-size: rem(14);
     }
 }

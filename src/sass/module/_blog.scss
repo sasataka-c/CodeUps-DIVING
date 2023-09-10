@@ -53,7 +53,6 @@
 
 .blog__button {
     margin: rem(40) auto 0;
-
     @include mq(md) {
         margin-top: rem(80);
     }
