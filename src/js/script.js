@@ -2,16 +2,19 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
     // ドロワーメニュー
-    $('.js-hamburger').on('click', function () {
+    // let pos;
+    $('.js-hamburger, .js-sp-nav-item').on('click', function () {
         if ($('.js-hamburger').hasClass('is-active')) {
             $('.js-hamburger').removeClass('is-active');
-            $('body').removeClass('is-fixed');
             $('.js-sp-nav').fadeOut();
+            // $('body').removeClass('is-fixed');
+            // window.scrollTo(0, pos);
             // $('.js-sp-nav').removeClass('is-active');
         } else {
             $('.js-hamburger').addClass('is-active');
-            $('body').addClass('is-fixed');
             $('.js-sp-nav').fadeIn();
+            // pos = $(window).scrollTop();
+            // $('body').addClass('is-fixed');
             // $('.js-sp-nav').addClass('is-active');
         }
     });

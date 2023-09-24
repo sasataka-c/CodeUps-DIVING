@@ -58,6 +58,7 @@
     height: 100vh;
     background-color: $green;
     z-index: 3;
+    // opacity: 0.5;
     // transform: translateX(-100%);
     // transition: all .3s;
     // overflow: scroll;
@@ -69,7 +70,7 @@
 
 .header__sp-nav {
     margin-top: rem(64);
-    margin-left: rem(15);
+    // margin-left: rem(15);
     overflow: scroll;
 }
 

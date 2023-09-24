@@ -93,6 +93,10 @@
     }
 }
 
+.price__list-price {
+    margin-left: rem(16);
+}
+
 .price__button {
     margin: rem(40) auto 0;
     @include mq(md) {

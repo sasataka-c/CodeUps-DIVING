@@ -8,10 +8,16 @@
 
 .footer-info__logo img {
     width: rem(120);
+    transition: all .3s;
     @include mq(md) {
         width: rem(200);
     }
 }
+
+.footer-info__logo img:hover {
+    opacity: 0.8;
+}
+
 
 .footer-info__icons {
     display: flex;
@@ -32,10 +38,15 @@
 .footer-info__icon img {
     width: rem(24);
     height: rem(24);
+    transition: all .3s;
     @include mq(md) {
         width: rem(32);
         height: rem(32);
     }
+}
+
+.footer-info__icon img:hover {
+    opacity: 0.8;
 }
 
 // .footer__link {

@@ -46,6 +46,7 @@
 
     @include mq(md) {
         display: flex;
+        flex-wrap: wrap;
         gap: rem(40);
         margin-top: rem(80);
     }

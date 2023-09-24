@@ -91,6 +91,7 @@
         font-size: rem(80);
         line-height: 1.25;
         color: $white;
+        min-width: rem(400);
     }
 }
 
@@ -100,6 +101,7 @@
         margin-top: 0;
         width: calc(50% - rem(20));
         margin-left: rem(40);
+        max-width: rem(400);
     }
 }
 

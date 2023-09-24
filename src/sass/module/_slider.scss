@@ -18,6 +18,10 @@
   flex-grow: 1;
 }
 
+.slider__item a:hover {
+  opacity: 0.8;
+}
+
 .slider__img {
   position: relative;
 }
@@ -134,6 +138,7 @@
 
 .slider-button:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
 .slider-button-next {

@@ -38,3 +38,8 @@
     font-size: rem(16);
     line-height: calc(18 / 16);
 }
+
+.link-nav__head a:hover,
+.link-nav__item a:hover {
+    opacity: 0.8;
+}

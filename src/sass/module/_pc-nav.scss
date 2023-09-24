@@ -29,11 +29,12 @@
 .pc-nav__item a {
     // display: inline-block;
     position: relative;
-    // height: inherit; // これだと上下中央寄せのやり方がわからない
-
-    // display: flex;
-    // justify-content: center;
-    // flex-direction: column;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    // flex-directionで縦に並べてるので、
+    // align-itemsではなくjustify-contentを使って上下中央に
+    flex-direction: column;
     padding: 0 rem(20);
 }
 
@@ -47,7 +48,7 @@
 .pc-nav__item a::after {
     content: '';
     position: absolute;
-    bottom: rem(-4);
+    bottom: rem(18);
     left: 10%;
     width: 80%;
     height: rem(1);

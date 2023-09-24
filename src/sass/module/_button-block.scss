@@ -18,7 +18,7 @@
     position: relative;
     z-index: 1; // button__borderより上に配置したい
     border: rem(1) solid $green;
-    background-image: linear-gradient(to right, transparent 50%, $green 50%);
+    background-image: linear-gradient(to right, $white 50%, $green 50%);
     background-position: 100%; // 背景位置を右端に
     background-size: 200%; // サイズを2倍に
     transition: all .2s;
@@ -66,4 +66,5 @@
     top: rem(4);
     left: rem(4);
     z-index: 0;
+    // background-color: $white;
 }
