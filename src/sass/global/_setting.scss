@@ -21,16 +21,9 @@ body {
   scroll-padding-top: rem(90);
 }
 
-// body.is-fixed {
-//   position: fixed;
-//   width: 100%;
-//   top: 0;
-//   left: 0;
-// }
-
-// body.no-scroll {
-//   overflow: hidden;
-// }
+body.no-scroll {
+  overflow: hidden;
+}
 
 // フォントウェイト
 $regular: 300;

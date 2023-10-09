@@ -2,9 +2,6 @@
 
 .information {
     background-color: $bg-green;
-}
-
-.information__inner {
     padding-top: rem(80);
     padding-bottom: rem(80);
     @include mq(md) {
@@ -13,11 +10,15 @@
     }
 }
 
+.information__inner {
+}
+
 .information__content {
     @include mq(md) {
         margin-top: rem(36);
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+        gap: rem(48);
         align-items: center;
     }
 }
@@ -44,8 +45,9 @@
     margin-top: rem(24);
     @include mq(md) {
         margin-top: 0;
-        padding-left: rem(48);
-        width: 50%;
+        // padding-left: rem(48);
+        // margin-left: rem(48);
+        width: 45.5%;
     }
 }
 
@@ -70,5 +72,6 @@
 }
 
 .information__button {
-    margin: rem(40) auto 0;
+    margin-top: rem(40);
+    text-align: center;
 }

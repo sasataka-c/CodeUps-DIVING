@@ -7,14 +7,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         if ($('.js-hamburger').hasClass('is-active')) {
             $('.js-hamburger').removeClass('is-active');
             $('.js-sp-nav').fadeOut();
-            // $('body').removeClass('is-fixed');
+            $('body').removeClass('no-scroll');
             // window.scrollTo(0, pos);
             // $('.js-sp-nav').removeClass('is-active');
         } else {
             $('.js-hamburger').addClass('is-active');
             $('.js-sp-nav').fadeIn();
+            $('body').addClass('no-scroll');
             // pos = $(window).scrollTop();
-            // $('body').addClass('is-fixed');
             // $('.js-sp-nav').addClass('is-active');
         }
     });
@@ -37,10 +37,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           nextEl: ".slider-button-next",
           prevEl: ".slider-button-prev",
         },
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
         breakpoints: {
           375: {
             slidesPerView: 1.25,
@@ -51,13 +51,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             spaceBetween: 35,
           },
           1440: {
-            slidesPerView: 3.46,
+            slidesPerView: 3.47,
             spaceBetween: 40,
           }
         },
       });
 
-    // 画像のinveiw
+    // 画像のinview
     let box = $(".js-colorbox"),
         speed = 700;
 

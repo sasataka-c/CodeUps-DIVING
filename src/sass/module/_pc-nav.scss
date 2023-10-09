@@ -35,15 +35,15 @@
     // flex-directionで縦に並べてるので、
     // align-itemsではなくjustify-contentを使って上下中央に
     flex-direction: column;
-    padding: 0 rem(20);
+    padding: 0 1.4vw;
 }
 
-.pc-nav__item:first-child a {
-    padding-left: 0;
-}
-.pc-nav__item:last-child a {
-    padding-right: 0;
-}
+// .pc-nav__item:first-child a {
+//     padding-left: 0;
+// }
+// .pc-nav__item:last-child a {
+//     padding-right: 0;
+// }
 
 .pc-nav__item a::after {
     content: '';
@@ -58,12 +58,12 @@
     transform-origin: center top;
 }
 
-.pc-nav__item:first-child a::after {
-    left: 0;
-}
-.pc-nav__item:last-child a::after {
-    left: 20%;
-}
+// .pc-nav__item:first-child a::after {
+//     left: 0;
+// }
+// .pc-nav__item:last-child a::after {
+//     left: 20%;
+// }
 // ↑ 左右のpaddingでクリック領域広げたけど、
 // 両端のpadding削除する時に下線の長さに影響が出たので追加
 

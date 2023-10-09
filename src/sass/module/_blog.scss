@@ -3,6 +3,9 @@
 .blog {
     position: relative;
     // z-index: 2;
+    @include mq(md) {
+        padding-top: rem(100);
+    }
 }
 
 .blog::before {
@@ -30,15 +33,13 @@
         height: rem(201);
         position: absolute;
         top: rem(24);
-        left: rem(100);
+        left: calc(50% - min(47vw, rem(620)));
         z-index: -1;
     }
 }
 
 .blog__inner {
-    @include mq(md) {
-        padding-top: rem(100);
-    }
+    
 }
 
 .blog__items {
@@ -53,7 +54,8 @@
 }
 
 .blog__button {
-    margin: rem(40) auto 0;
+    margin-top: rem(40);
+    text-align: center;
     @include mq(md) {
         margin-top: rem(80);
     }

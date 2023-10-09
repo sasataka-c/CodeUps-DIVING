@@ -1,12 +1,14 @@
 @use "global" as *;
 
-.button-block {
-    width: rem(206);
-    height: rem(58);
+.button {
+    // width: rem(206);
+    // height: rem(58);
     position: relative;
+    z-index: 1;
 }
 
-.button-block__item {
+
+.button__item {
     display: inline-block;
     font-size: rem(14);
     font-weight: $normal;
@@ -16,20 +18,34 @@
     padding: rem(19) rem(40);
     line-height: 1;
     position: relative;
-    z-index: 1; // button__borderより上に配置したい
+    // z-index: 1; 指定すると疑似要素が下に回り込めない
     border: rem(1) solid $green;
     background-image: linear-gradient(to right, $white 50%, $green 50%);
     background-position: 100%; // 背景位置を右端に
     background-size: 200%; // サイズを2倍に
     transition: all .2s;
+    text-align: left;
 }
 
-.button-block__item:hover {
+.button__item:hover {
     background-position: 0; // 位置が左端に戻る
     color: $green;
 }
 
-.button-block__item::before {
+.button__item::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    max-width: rem(202);
+    position: absolute;
+    border: rem(1) solid $green;
+    top: rem(3);
+    left: rem(3);
+    z-index: -1;
+    box-sizing: content-box;
+}
+
+.button__item p::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -41,7 +57,7 @@
     transition: all .2s;
 }
 
-.button-block__item::after {
+.button__item p::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -53,18 +69,18 @@
     transition: all .2s;
 }
 
-.button-block__item:hover::before,
-.button-block__item:hover::after {
+.button__item:hover p::before,
+.button__item:hover p::after {
     background-color: $green;
 }
 
-.button-block__border {
-    width: rem(202);
-    padding: rem(26) 0;
-    border: rem(1) solid $green;
-    position: absolute;
-    top: rem(4);
-    left: rem(4);
-    z-index: 0;
-    // background-color: $white;
-}
+// .button-block__border {
+//     width: rem(202);
+//     padding: rem(26) 0;
+//     border: rem(1) solid $green;
+//     position: absolute;
+//     top: rem(4);
+//     left: rem(4);
+//     z-index: 0;
+//     // background-color: $white;
+// }

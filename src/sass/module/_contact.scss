@@ -16,7 +16,7 @@
     @include mq(md) {
         background-image: url(../images/common/contact-kingyo-pc.svg);
         top: rem(-40);
-        right: rem(50);
+        right: calc(50% - min(47vw, rem(670.4)));
         width: rem(301);
         height: rem(138);
     }
@@ -136,5 +136,6 @@
 }
 
 .contact__button {
-    margin: rem(40) auto 0;
+    margin-top: rem(40);
+    text-align: center;
 }
