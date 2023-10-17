@@ -35,7 +35,8 @@
     // flex-directionで縦に並べてるので、
     // align-itemsではなくjustify-contentを使って上下中央に
     flex-direction: column;
-    padding: 0 1.4vw;
+    // padding: 0 min(1.4vw, rem(20));
+    padding: 0 min(1.4vw, rem(20));
 }
 
 // .pc-nav__item:first-child a {

@@ -40,8 +40,10 @@
     margin-top: rem(40);
     @include mq(md) {
         margin-top: rem(30);
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: rem(40);
     }
 }

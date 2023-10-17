@@ -46,10 +46,13 @@
     margin-top: rem(24);
 
     @include mq(md) {
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: rem(40);
         margin-top: rem(80);
+
     }
 }
 

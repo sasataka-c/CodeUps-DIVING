@@ -16,6 +16,10 @@
     }
 }
 
+.section-header__en-title::first-letter {
+    color: $green;
+}
+
 .section-header__ja-title {
     font-size: rem(12);
     color: $green;
@@ -27,13 +31,19 @@
     }
 }
 
-.section-header__en-title--green {
-    color: $green;
-}
+// .section-header__en-title--green {
+//     color: $green;
+// }
 
 .section-header__blog--white {
     @include mq(md) {
         color: $white;
+    }
+}
+
+.section-header__blog--white::first-letter {
+    @include mq(md) {
+        color: #DDF0F1;
     }
 }
 
@@ -44,4 +54,8 @@
     font-weight: $normal;
     line-height: calc(40 / 32);
     color: $black;
+}
+
+.section-header__contact--big::first-letter {
+    color: $green;
 }

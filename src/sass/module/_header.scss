@@ -79,6 +79,7 @@
     height: calc(100vh - rem(80));
     // ↑高さを指定しないとスクロールが出来ない
     // height: 100vh;
+    // ↑100vhだと下までスクロールが出来ない（理由わからず）
     // padding-bottom: rem(110);
     // margin-top: rem(64);
     // margin-left: rem(15);

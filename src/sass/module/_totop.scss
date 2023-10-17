@@ -5,7 +5,7 @@
     width: rem(48);
     height: rem(48);
     right: rem(16);
-    z-index: 300;
+    z-index: 10;
     padding: 0;
     display: block;
     @include mq("md") {

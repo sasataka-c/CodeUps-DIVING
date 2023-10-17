@@ -1,8 +1,6 @@
 @use "global" as *;
 
 .slider__items {
-  display: grid;
-  grid-auto-flow: column;
 }
 
 .slider__item {
