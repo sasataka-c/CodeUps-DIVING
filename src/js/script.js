@@ -37,10 +37,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           nextEl: ".slider-button-next",
           prevEl: ".slider-button-prev",
         },
-        // autoplay: {
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
         breakpoints: {
           375: {
             slidesPerView: 1.25,
