@@ -15,9 +15,24 @@
   }
 }
 
+.campaign__slider-button {
+  position: absolute;
+  top: rem(0);
+  width: rem(80);
+  height: rem(80);
+  transform: 0.3s;
+}
+
+.campaign__slider-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .campaign__button{
     margin-top: rem(40);
     text-align: center;
+    position: relative;
+    z-index: 0;
     @include mq(md) {
         margin-top: rem(60);
     }

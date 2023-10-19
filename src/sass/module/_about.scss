@@ -130,6 +130,8 @@
 .about__button {
     margin-top: rem(50);
     text-align: center;
+    position: relative;
+    z-index: 0;
     @include mq(md) {
         margin-top: rem(40);
     }

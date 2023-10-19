@@ -3,7 +3,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
     // ドロワーメニュー
     // let pos;
-    $('.js-hamburger, .js-sp-nav-item').on('click', function () {
+    $('.js-hamburger, .js-sp-nav a').on('click', function () {
         if ($('.js-hamburger').hasClass('is-active')) {
             $('.js-hamburger').removeClass('is-active');
             $('.js-sp-nav').fadeOut();
@@ -37,10 +37,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           nextEl: ".slider-button-next",
           prevEl: ".slider-button-prev",
         },
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
         breakpoints: {
           375: {
             slidesPerView: 1.25,
